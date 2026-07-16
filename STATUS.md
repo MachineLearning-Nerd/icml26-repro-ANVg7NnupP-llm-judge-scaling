@@ -8,4 +8,5 @@
 - Trackio: https://huggingface.co/spaces/DineshAI/ANVg7NnupP
 - Space SHA: `888e34394f08123538bccdaba0e8852558a5b724`
 - Artifact bucket: `DineshAI/ANVg7NnupP-artifacts`
-- Next: publish GitHub mirror and await official verdict
+- GitHub: https://github.com/MachineLearning-Nerd/icml26-repro-ANVg7NnupP-llm-judge-scaling
+- Next: await official verdict
