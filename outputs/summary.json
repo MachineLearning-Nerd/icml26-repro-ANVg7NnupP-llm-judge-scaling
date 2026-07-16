@@ -1,0 +1,17 @@
+{
+  "claim_1": "verified",
+  "claim_2": "verified",
+  "claim_3": "verified",
+  "good_monotone_curves": 36,
+  "good_total_curves": 36,
+  "finite_optimum_curves": 23,
+  "phase_total_curves": 90,
+  "representative_optimal_k": 2,
+  "representative_k1_error": 1.040000000000004,
+  "representative_k256_error": 1.0827298462485193,
+  "representative_degradation_pct": 5.809084625014016,
+  "best_of_k_slope_min": -1.9975616978815185,
+  "best_of_k_slope_max": -1.9975445684775015,
+  "best_of_k_max_coefficient_relative_error_k_ge_1024": 0.0029230255265433325,
+  "monte_carlo_max_absolute_error": 0.004079085648643455
+}
