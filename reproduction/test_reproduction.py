@@ -1,9 +1,11 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from release.audit_candidate import audit_source_tree
 OUT=Path(__file__).parents[1]/"outputs"
+ROOT=OUT.parent
 
 def summary(): return json.loads((OUT/"summary.json").read_text())
 def test_claims_verified(): assert all(summary()[f"claim_{i}"]=="verified" for i in (1,2,3))
@@ -44,7 +46,15 @@ def test_claim5_raw_output_exists():
     assert (OUT/"claim5_scaling_comparison.csv").is_file()
 
 def test_evaluator_visible_release_is_fail_closed():
-    audit = audit_source_tree()
+    completed = subprocess.run(
+        [sys.executable, str(ROOT/"release/audit_candidate.py")],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    assert completed.returncode == 0, completed.stdout + completed.stderr
+    audit = json.loads(completed.stdout)
     assert audit["pass"], audit["failures"]
     assert audit["visibility_rows_complete"]
     assert audit["claims"] == {str(i): "VERIFIED" for i in range(1, 6)}
