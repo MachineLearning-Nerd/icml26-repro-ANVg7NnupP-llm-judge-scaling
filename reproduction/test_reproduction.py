@@ -31,3 +31,13 @@ def test_claim4_verified_fail_closed():
 def test_claim4_raw_outputs_exist():
     assert (OUT/"claim4_temperature_exact.csv").is_file()
     assert (OUT/"claim4_monte_carlo.csv").is_file()
+
+def test_claim5_verified_fail_closed():
+    s=summary()
+    assert s["claim_5"]=="verified"
+    assert abs(s["claim_5_inference_log_slope"]+2)<1e-12
+    assert s["claim_5_training_log_slope_magnitude_max"]<=.01
+    assert s["claim_5_minimum_exponent_magnitude_ratio"]>=200
+
+def test_claim5_raw_output_exists():
+    assert (OUT/"claim5_scaling_comparison.csv").is_file()

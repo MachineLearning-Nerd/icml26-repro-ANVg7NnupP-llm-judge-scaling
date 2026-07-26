@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from scipy.special import ndtr, roots_hermitenorm, roots_legendre
 from claim4_verification import run_claim4
+from claim5_verification import run_claim5
 
 KS = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256])
 
@@ -115,6 +116,7 @@ def run(out):
     mc = pd.DataFrame(mc_rows); mc.to_csv(out / "monte_carlo_crosscheck.csv", index=False)
     best = best_of_k_sweep(); best.to_csv(out / "best_of_k_exact.csv", index=False)
     claim4 = run_claim4(q, out, Path(".openresearch/artifacts/claim4"))
+    claim5 = run_claim5(out, Path(".openresearch/artifacts/claim5"))
     good_curves = good.groupby(["delta_teacher", "reward_shift", "t"]).curve_monotone.first()
     phase_curves = phase.groupby(["delta_teacher", "reward_misspec", "t"]).finite_optimum.first()
     rep = phase[(phase.delta_teacher == .2) & (phase.reward_misspec == 2.) & (phase.t == 5.)]
@@ -134,6 +136,14 @@ def run(out):
         "claim_4_eligible_max_relative_error": claim4["eligible_max_relative_error"],
         "claim_4_eligible_median_relative_error": claim4["eligible_median_relative_error"],
         "claim_4_monte_carlo_max_absolute_z_score": claim4["monte_carlo_max_absolute_z_score"],
+        "claim_5": claim5["status"].lower(),
+        "claim_5_inference_log_slope": claim5["inference_log_slope"],
+        "claim_5_training_log_slope_magnitude_max": claim5[
+            "training_log_slope_magnitude_max"
+        ],
+        "claim_5_minimum_exponent_magnitude_ratio": claim5[
+            "minimum_inference_to_training_magnitude_ratio"
+        ],
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     fig, ax = plt.subplots(1, 3, figsize=(13, 3.8))

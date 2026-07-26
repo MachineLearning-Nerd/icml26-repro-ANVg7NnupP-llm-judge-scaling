@@ -329,8 +329,8 @@ Verdict: **{summary['status']}**
     print(json.dumps(checker, indent=2))
     print("CLAIM4_NEGATIVE_CONTROL")
     print(json.dumps(control, indent=2))
-    print("CLAIM4_ELIGIBLE_ROWS")
-    print(eligible.to_csv(index=False).strip())
+    print("CLAIM4_ALL_CALIBRATION_ROWS")
+    print(calibration.to_csv(index=False).strip())
     print("CLAIM4_EVIDENCE_END")
     if not all(checks.values()):
         failed = [name for name, passed in checks.items() if not passed]
