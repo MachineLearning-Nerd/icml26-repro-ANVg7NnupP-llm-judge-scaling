@@ -6,7 +6,7 @@ It was not told where current evidence was stored. Traversal began at
 
 ## Pass 1 — blocked
 
-Fresh candidate: `/tmp/orx-candidate-prepub-773fa691`  
+Fresh candidate: `/tmp/orx-candidate-prepub-773fa691`
 Protected parent: `888e34394f08123538bccdaba0e8852558a5b724`
 
 Files opened, in order:
