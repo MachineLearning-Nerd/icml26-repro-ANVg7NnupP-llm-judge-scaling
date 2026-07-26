@@ -111,8 +111,10 @@ def algebraic_certificate() -> dict:
         "training_chain_rule": (
             "dlog(delta)/dlog(n)=-alpha*d_alpha(uT Sigma u)/(sigma2*d-2*uT Sigma u)"
         ),
-        "pass": abs(fitted_slope + 2) < 1e-12
-        and np.max(np.abs(ratio_invariant / ratio_invariant[0] - 1)) < 1e-12,
+        "pass": bool(
+            abs(fitted_slope + 2) < 1e-12
+            and np.max(np.abs(ratio_invariant / ratio_invariant[0] - 1)) < 1e-12
+        ),
     }
 
 
@@ -348,4 +350,3 @@ Verdict: **{summary['status']}**
         failed = [name for name, passed in checks.items() if not passed]
         raise AssertionError(f"Claim 5 fail-closed verifier rejected: {failed}")
     return summary
-
