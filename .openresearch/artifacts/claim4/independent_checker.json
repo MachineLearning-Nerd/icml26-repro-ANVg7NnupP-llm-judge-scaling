@@ -1,0 +1,10 @@
+{
+  "seed": 251219905,
+  "trials": 120000,
+  "fixed_temperature_grid": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128],
+  "predicted_t": 27.200000000000003,
+  "monte_carlo_grid_minimum_t": 24.0,
+  "max_absolute_z_score": 0.44299771521147785,
+  "prediction_bracketed": true,
+  "pass": true
+}

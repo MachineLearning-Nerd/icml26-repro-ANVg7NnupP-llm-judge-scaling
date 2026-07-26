@@ -1,0 +1,8 @@
+{
+  "factorization": "delta(alpha,k)=C(alpha)*k^-2",
+  "universal_derivative": "dlog(delta)/dlog(k)=-2",
+  "fitted_slope": -2.000000000000001,
+  "max_relative_variation_of_delta_k_squared": 0.0,
+  "training_chain_rule": "dlog(delta)/dlog(n)=-alpha*d_alpha(uT Sigma u)/(sigma2*d-2*uT Sigma u)",
+  "pass": true
+}

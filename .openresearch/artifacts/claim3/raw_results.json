@@ -1,0 +1,14 @@
+{
+  "raw_table": "../../../outputs/misspecification_phase.csv",
+  "finite_optimum_configurations": 23,
+  "total_configurations": 90,
+  "representative": {
+    "delta_teacher": 0.2,
+    "reward_misspecification": 2.0,
+    "t": 5.0,
+    "optimal_k": 2,
+    "k1_error": 1.040000000000004,
+    "k256_error": 1.0827298462485193,
+    "post_optimum_degradation_percent": 5.809084625014016
+  }
+}

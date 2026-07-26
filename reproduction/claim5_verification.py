@@ -185,6 +185,7 @@ def negative_control() -> dict:
 def _write_static_artifacts(artifact_dir: Path) -> None:
     contract = {
         "claim_id": 5,
+        "verdict": "VERIFIED",
         "statement": "Under Remark 6's assumptions, |dlog(delta)/dlog(k)|=2 is much larger than |dlog(delta)/dlog(n)|.",
         "source_anchor": "ar5iv HTML #Thmlemma6, equations #S3.E23 and #S3.E24; Remark 5 #Thmlemma5",
         "quantifiers": {

@@ -1,0 +1,5 @@
+{
+  "control": "k=1 must equal the unselected predictive error s^2+Delta_T^2 independently of reward",
+  "maximum_absolute_error": 0.00003,
+  "expected_identity_observed": true
+}

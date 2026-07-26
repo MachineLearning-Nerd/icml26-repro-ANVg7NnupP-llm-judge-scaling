@@ -1,0 +1,11 @@
+{
+  "scientific_commit": "02de86848c638d3280fa89f4cff416cde9664c1e",
+  "run_id": "6f3196eb-7767-48ce-8c25-86fefac1f11a",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_required_cores": 2,
+  "actual_cpu_affinity_count": 64,
+  "cumulative_scientific_runtime_seconds": 8.392,
+  "total_job_runtime_seconds": 42,
+  "seed": 331
+}

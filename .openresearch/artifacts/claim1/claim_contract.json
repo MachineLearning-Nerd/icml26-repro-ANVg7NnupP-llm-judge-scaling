@@ -1,0 +1,11 @@
+{
+  "claim_id": 1,
+  "verdict": "VERIFIED",
+  "source_anchor": "Result 3",
+  "statement": "With reward equal to the teacher and T tending to zero, delta(x) is asymptotic to pi*s(x)^2*exp(Delta_T(x)^2/s(x)^2)/k^2.",
+  "domain": "pointwise Gaussian model; ordered low-temperature then large-k limit",
+  "acceptance": {
+    "absolute_slope_error_max": 0.004,
+    "coefficient_relative_error_k_ge_1024_max": 0.004
+  }
+}

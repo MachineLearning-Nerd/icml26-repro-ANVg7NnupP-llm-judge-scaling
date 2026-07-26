@@ -1,0 +1,10 @@
+{
+  "control": "omit finite-k factor (1-2/k), and violate k>2",
+  "k": 3,
+  "delta_reward": 6.0,
+  "wrong_predicted_t": 74.0,
+  "exact_optimal_t": 25.820596207588252,
+  "wrong_relative_error": 1.8659291754948946,
+  "k_equals_2_rejected": true,
+  "expected_failure_observed": true
+}

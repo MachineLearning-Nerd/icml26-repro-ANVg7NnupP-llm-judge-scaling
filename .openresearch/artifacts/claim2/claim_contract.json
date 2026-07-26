@@ -1,0 +1,11 @@
+{
+  "claim_id": 2,
+  "verdict": "VERIFIED",
+  "source_anchor": "Result 2",
+  "statement": "Generalization error is non-increasing in k when reward and teacher are sufficiently aligned in the tested high-temperature conditional model.",
+  "acceptance": {
+    "all_prespecified_curves_monotone": true,
+    "k1_identity_absolute_error_max": 0.00003,
+    "monte_carlo_absolute_error_max": 0.006
+  }
+}

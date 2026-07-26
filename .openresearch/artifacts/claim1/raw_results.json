@@ -1,0 +1,7 @@
+{
+  "raw_table": "../../../outputs/best_of_k_exact.csv",
+  "teacher_offsets": [0.0, 0.25, 0.5, 1.0],
+  "maximum_k": 16384,
+  "fitted_slope_range": [-1.9975616978815185, -1.9975445684775015],
+  "maximum_coefficient_relative_error_for_k_ge_1024": 0.0029230255265433325
+}

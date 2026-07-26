@@ -1,0 +1,16 @@
+{
+  "claim_id": 4,
+  "verdict": "VERIFIED",
+  "source_anchor": "Remark 4 #Thmlemma4, equation #S3.E22; Result 2 #Thmtheorem2",
+  "statement": "For fixed k>2 with C1>0 and C2>0, the second-order high-temperature expansion has its unique positive minimum at t=2(1-2/k)C2/C1.",
+  "assumptions": ["pointwise in x", "t=T/(2s(x)^2)", "t>>1", "k>2", "C1>0", "C2>0"],
+  "acceptance": {
+    "algebraic_certificate": true,
+    "high_temperature_definition": "predicted t >= 20",
+    "eligible_cases_min": 8,
+    "eligible_max_relative_error": 0.2,
+    "eligible_median_relative_error": 0.1,
+    "monte_carlo_max_absolute_z_score": 5.0,
+    "wrong_formula_control_min_relative_error": 0.5
+  }
+}

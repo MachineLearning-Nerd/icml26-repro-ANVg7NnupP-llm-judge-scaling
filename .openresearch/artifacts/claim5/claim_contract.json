@@ -1,0 +1,15 @@
+{
+  "claim_id": 5,
+  "verdict": "VERIFIED",
+  "source_anchor": "Remark 6 #Thmlemma6, equations #S3.E23 and #S3.E24; Remark 5 #Thmlemma5",
+  "statement": "Under Remark 6's assumptions, the magnitude of dlog(delta)/dlog(k) is 2 and is much larger than the magnitude of dlog(delta)/dlog(n).",
+  "quantifiers": {
+    "limit": "d,n tend to infinity with alpha=d/n<1 fixed",
+    "selection": "exact teacher reward; T tends to zero followed by k tending to infinity",
+    "conditions": ["(gamma^2/d)Tr(B_R Sigma) << sigma^2", "R << sigma^2"]
+  },
+  "numerical_audit": {
+    "each_condition_ratio_max": 0.1,
+    "minimum_exponent_magnitude_ratio": 200
+  }
+}

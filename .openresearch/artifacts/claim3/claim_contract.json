@@ -1,0 +1,11 @@
+{
+  "claim_id": 3,
+  "verdict": "VERIFIED",
+  "source_anchor": "Remark 3",
+  "statement": "Substantial reward misspecification can produce a finite optimal k and post-optimum degradation.",
+  "acceptance": {
+    "minimum_number_of_interior_optima": 20,
+    "minimum_post_optimum_degradation_percent": 0.5,
+    "representative_optimal_k": 2
+  }
+}

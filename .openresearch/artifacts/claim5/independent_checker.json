@@ -1,0 +1,6 @@
+{
+  "method": "implicit Brent root plus central log(n) differences",
+  "max_ridge_absolute_difference": 1.6940658945086007e-16,
+  "max_slope_absolute_difference": 8.543360721229663e-12,
+  "pass": true
+}

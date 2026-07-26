@@ -1,0 +1,6 @@
+{
+  "mechanism": "survival integral with r=s*x/k change of variables",
+  "independent_of": "finite-temperature ratio quadrature and Monte Carlo",
+  "exponent_pass": true,
+  "coefficient_pass": true
+}

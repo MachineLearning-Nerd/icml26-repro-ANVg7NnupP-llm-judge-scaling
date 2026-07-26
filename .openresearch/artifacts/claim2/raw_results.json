@@ -1,0 +1,8 @@
+{
+  "quadrature_table": "../../../outputs/good_reward_exact.csv",
+  "monte_carlo_table": "../../../outputs/monte_carlo_crosscheck.csv",
+  "monotone_curves": 36,
+  "total_curves": 36,
+  "maximum_monte_carlo_absolute_error": 0.004079085648643455,
+  "maximum_k1_identity_error": 0.00003
+}

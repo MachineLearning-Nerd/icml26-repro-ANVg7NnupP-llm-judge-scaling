@@ -1,0 +1,13 @@
+{
+  "purpose": "violate both smallness assumptions",
+  "alpha_d_over_n": 0.2,
+  "sigma2": 0.1,
+  "gamma2": 0.1,
+  "condition_gamma2_trace_over_sigma2": 0.19258240356725206,
+  "condition_ridge_over_sigma2": 2.3851648071345046,
+  "inference_slope_magnitude": 2.0,
+  "training_slope_magnitude": 2.6669206461516852,
+  "assumptions_rejected": true,
+  "inference_dominance_rejected": true,
+  "expected_failure_observed": true
+}

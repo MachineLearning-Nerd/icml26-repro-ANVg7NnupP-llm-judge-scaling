@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from release.audit_candidate import audit_source_tree
 OUT=Path(__file__).parents[1]/"outputs"
 
 def summary(): return json.loads((OUT/"summary.json").read_text())
@@ -41,3 +42,9 @@ def test_claim5_verified_fail_closed():
 
 def test_claim5_raw_output_exists():
     assert (OUT/"claim5_scaling_comparison.csv").is_file()
+
+def test_evaluator_visible_release_is_fail_closed():
+    audit = audit_source_tree()
+    assert audit["pass"], audit["failures"]
+    assert audit["visibility_rows_complete"]
+    assert audit["claims"] == {str(i): "VERIFIED" for i in range(1, 6)}

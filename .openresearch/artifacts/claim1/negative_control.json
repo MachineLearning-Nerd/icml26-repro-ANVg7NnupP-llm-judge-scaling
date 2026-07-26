@@ -1,0 +1,5 @@
+{
+  "control": "small-k rows are excluded from the asymptotic coefficient acceptance window",
+  "expected_behavior": "pre-asymptotic coefficient error is larger than the k>=1024 tail error",
+  "observed": true
+}

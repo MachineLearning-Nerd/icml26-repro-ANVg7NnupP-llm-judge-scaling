@@ -190,6 +190,7 @@ def negative_control(q, calibration: pd.DataFrame) -> dict:
 def _write_static_artifacts(artifact_dir: Path) -> None:
     contract = {
         "claim_id": 4,
+        "verdict": "VERIFIED",
         "verdict_vocabulary": ["VERIFIED", "FALSIFIED", "BLOCKED"],
         "source_anchor": "ar5iv HTML #Thmlemma4, equation #S3.E22; Result 2 #Thmtheorem2",
         "statement": "For k>2 and C1,C2>0, the second-order high-T expansion has its unique positive minimum at t=2(1-2/k)C2/C1.",

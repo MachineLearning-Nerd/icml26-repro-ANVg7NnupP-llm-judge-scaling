@@ -5,6 +5,7 @@ description = "CPU reproduction of arXiv:2512.19905"
 requires-python = "==3.12.*"
 dependencies = [
   "matplotlib==3.11.0",
+  "marimo==0.18.0",
   "numpy==2.3.5",
   "pandas==3.0.3",
   "pytest==9.0.2",
@@ -14,4 +15,3 @@ dependencies = [
 
 [tool.uv]
 package = false
-

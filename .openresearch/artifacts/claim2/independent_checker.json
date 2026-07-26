@@ -1,0 +1,7 @@
+{
+  "method": "640000 total seeded direct Monte Carlo trials",
+  "seeds": [330, 331],
+  "maximum_absolute_error": 0.004079085648643455,
+  "threshold": 0.006,
+  "pass": true
+}

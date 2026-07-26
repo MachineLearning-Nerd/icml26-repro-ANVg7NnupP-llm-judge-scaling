@@ -1,0 +1,6 @@
+{
+  "control": "near-teacher reward sweep should not show post-optimum harm",
+  "aligned_curves_non_increasing": 36,
+  "aligned_curves_total": 36,
+  "expected_contrast_observed": true
+}

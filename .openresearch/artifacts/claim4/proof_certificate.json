@@ -1,0 +1,11 @@
+{
+  "expansion": "D-A*C1/t+A*B*C2/t^2",
+  "A": "1-1/k",
+  "B": "1-2/k",
+  "derivative_times_t_cubed": "A*(C1*t-2*B*C2)",
+  "unique_positive_solution": "t=2*(1-2/k)*C2/C1",
+  "curvature_at_solution_times_t_fourth": "2*A*B*C2>0",
+  "checked_positive_cases": 15,
+  "invalid_conditions_rejected": 3,
+  "pass": true
+}
