@@ -20,3 +20,14 @@ def test_monte_carlo_agrees_with_independent_quadrature(): assert summary()["mon
 def test_k1_is_unselected_predictive_error():
     g=pd.read_csv(OUT/"good_reward_exact.csv"); k1=g[g.k==1]
     assert np.max(np.abs(k1.error-(1+k1.delta_teacher**2)))<3e-5
+
+def test_claim4_verified_fail_closed():
+    s=summary()
+    assert s["claim_4"]=="verified"
+    assert s["claim_4_eligible_max_relative_error"]<=.20
+    assert s["claim_4_eligible_median_relative_error"]<=.10
+    assert s["claim_4_monte_carlo_max_absolute_z_score"]<=5
+
+def test_claim4_raw_outputs_exist():
+    assert (OUT/"claim4_temperature_exact.csv").is_file()
+    assert (OUT/"claim4_monte_carlo.csv").is_file()

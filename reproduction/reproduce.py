@@ -8,6 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from scipy.special import ndtr, roots_hermitenorm, roots_legendre
+from claim4_verification import run_claim4
 
 KS = np.array([1, 2, 4, 8, 16, 32, 64, 128, 256])
 
@@ -113,6 +114,7 @@ def run(out):
                             "absolute_error": abs(e-m)})
     mc = pd.DataFrame(mc_rows); mc.to_csv(out / "monte_carlo_crosscheck.csv", index=False)
     best = best_of_k_sweep(); best.to_csv(out / "best_of_k_exact.csv", index=False)
+    claim4 = run_claim4(q, out, Path(".openresearch/artifacts/claim4"))
     good_curves = good.groupby(["delta_teacher", "reward_shift", "t"]).curve_monotone.first()
     phase_curves = phase.groupby(["delta_teacher", "reward_misspec", "t"]).finite_optimum.first()
     rep = phase[(phase.delta_teacher == .2) & (phase.reward_misspec == 2.) & (phase.t == 5.)]
@@ -128,6 +130,10 @@ def run(out):
         "best_of_k_slope_max": float(best.groupby("delta_teacher").tail_slope.first().max()),
         "best_of_k_max_coefficient_relative_error_k_ge_1024": float(np.max(np.abs(best[best.k >= 1024].scaled_coefficient / best[best.k >= 1024].theory_coefficient - 1))),
         "monte_carlo_max_absolute_error": float(mc.absolute_error.max()),
+        "claim_4": claim4["status"].lower(),
+        "claim_4_eligible_max_relative_error": claim4["eligible_max_relative_error"],
+        "claim_4_eligible_median_relative_error": claim4["eligible_median_relative_error"],
+        "claim_4_monte_carlo_max_absolute_z_score": claim4["monte_carlo_max_absolute_z_score"],
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     fig, ax = plt.subplots(1, 3, figsize=(13, 3.8))
