@@ -1,0 +1,17 @@
+[project]
+name = "llm-judge-scaling-reproduction"
+version = "0.1.0"
+description = "CPU reproduction of arXiv:2512.19905"
+requires-python = "==3.12.*"
+dependencies = [
+  "matplotlib==3.11.0",
+  "numpy==2.3.5",
+  "pandas==3.0.3",
+  "pytest==9.0.2",
+  "scipy==1.17.1",
+  "trackio==0.31.5",
+]
+
+[tool.uv]
+package = false
+
