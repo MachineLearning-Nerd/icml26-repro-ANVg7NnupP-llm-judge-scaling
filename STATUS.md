@@ -6,9 +6,9 @@
 - Claims 4–5: internally VERIFIED with exact contracts, independent checkers,
   negative controls, and evaluator-visible candidate pages
 - Evidence: 36/36 aligned curves monotone; 23 finite-optimum phase settings; exact representative values; four inverse-square certificates
-- Tests: 12/12 passing at scientific commit
-  `02de86848c638d3280fa89f4cff416cde9664c1e`
-- Latest cumulative run: 42 seconds total on HF `cpu-upgrade`, 8.392 seconds
+- Tests: 13/13 passing at validated verifier commit
+  `e0a6aa04e971eb1bf3516f484451e1f529b6f421`
+- Latest cumulative run: 47 seconds total on HF `cpu-upgrade`, 8.668 seconds
   scientific runtime
 - Trackio: https://huggingface.co/spaces/DineshAI/ANVg7NnupP
 - Space SHA: `888e34394f08123538bccdaba0e8852558a5b724`

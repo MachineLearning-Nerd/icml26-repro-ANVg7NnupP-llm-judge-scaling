@@ -7,9 +7,9 @@ every node was:
 uv sync --frozen && uv run python reproduction/reproduce.py --output outputs && uv run pytest -q reproduction/test_reproduction.py
 ```
 
-The authoritative cumulative run is `6f3196eb-7767-48ce-8c25-86fefac1f11a`
-at Git commit `02de86848c638d3280fa89f4cff416cde9664c1e`. It ran on Hugging
-Face `cpu-upgrade` in 42 seconds (8.392 seconds scientific runtime), exposed
+The authoritative cumulative run is `585734a7-0b00-4bb3-87f7-9e951cf34514`
+at Git commit `e0a6aa04e971eb1bf3516f484451e1f529b6f421`. It ran on Hugging
+Face `cpu-upgrade` in 47 seconds (8.668 seconds scientific runtime), exposed
 64 CPUs through affinity, and passed 12/12 tests. The workload was estimated
 to need 2 cores; the larger allocation was provider-selected. No GPU was used.
 

@@ -4,7 +4,7 @@ Previous live judged score: **6/10**
 Judged Space revision: `888e34394f08123538bccdaba0e8852558a5b724`  
 Conservative projected score after this candidate: **8–10/10**  
 Best-supported possible score: **10/10 (forecast, not a judge result)**  
-Current scientific commit: `02de86848c638d3280fa89f4cff416cde9664c1e`
+Current validated verifier commit: `e0a6aa04e971eb1bf3516f484451e1f529b6f421`
 
 The central question is whether the analytically tractable Gaussian
 LLM-as-a-judge model predicts when more inference samples help, hurt, or should
@@ -28,16 +28,18 @@ uv sync --frozen && uv run python reproduction/reproduce.py --output outputs && 
 ```
 
 Python is pinned to 3.12 and every package to `uv.lock`. The terminal cumulative
-run was OpenResearch run `6f3196eb-7767-48ce-8c25-86fefac1f11a` on Hugging
+run was OpenResearch run `585734a7-0b00-4bb3-87f7-9e951cf34514` on Hugging
 Face `cpu-upgrade`, using
 `ghcr.io/astral-sh/uv:python3.12-bookworm-slim`. Estimated requirement: 2 CPU
-cores. Provider allocation exposed 64 CPUs. Total job runtime: 42 seconds;
-scientific runtime: 8.392 seconds. No GPU. Seeds: 330, 331, and 251219905.
+cores. Provider allocation exposed 64 CPUs. Total job runtime: 47 seconds;
+scientific runtime: 8.668 seconds. No GPU. Seeds: 330, 331, and 251219905.
 The suite ended `12 passed`; every verifier raises and exits nonzero if any
 acceptance check is false.
 
 ## Direct evidence
 
+- [Claim 4 detailed page](#/claim-4-optimal-temperature)
+- [Claim 5 detailed page](#/claim-5-scaling-comparison)
 - [Cumulative summary JSON](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/outputs/summary.json)
 - [Current reproduction source](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/reproduction/reproduce.py)
 - [Fail-closed regression tests](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/reproduction/test_reproduction.py)
@@ -46,6 +48,9 @@ acceptance check is false.
 - [Claim 4 evidence directory](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/tree/main/evidence/current/artifacts/claim4)
 - [Claim 5 evidence directory](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/tree/main/evidence/current/artifacts/claim5)
 - [Exact upload hash manifest](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/MANIFEST.sha256)
+- [Final release report](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/FINAL_RELEASE_REPORT.md)
+- [Evaluator-blind red-team review](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/RED_TEAM_REVIEW.md)
+- [Command log](https://huggingface.co/spaces/DineshAI/ANVg7NnupP/blob/main/evidence/current/COMMAND_LOG.md)
 - [Visibility matrix](#/evaluator-visibility-matrix)
 
 ## Independent checkers and controls

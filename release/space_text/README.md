@@ -15,7 +15,8 @@ tags:
 
 # Demystifying LLM-as-a-Judge — current verification
 
-Start with **[Current verification: five claim contracts](#/current-verification)**.
+Start with **[Current verification: five claim contracts](#/current-verification)**,
+then use the **[complete page index](#/index)**.
 It is the canonical evaluator entrypoint for the candidate following judged
 revision `888e34394f08123538bccdaba0e8852558a5b724`.
 

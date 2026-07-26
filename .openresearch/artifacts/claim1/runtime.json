@@ -1,10 +1,10 @@
 {
-  "scientific_commit": "02de86848c638d3280fa89f4cff416cde9664c1e",
-  "run_id": "6f3196eb-7767-48ce-8c25-86fefac1f11a",
+  "scientific_commit": "e0a6aa04e971eb1bf3516f484451e1f529b6f421",
+  "run_id": "585734a7-0b00-4bb3-87f7-9e951cf34514",
   "backend": "hf",
   "flavor": "cpu-upgrade",
   "estimated_required_cores": 2,
   "actual_cpu_affinity_count": 64,
-  "cumulative_scientific_runtime_seconds": 8.392,
-  "total_job_runtime_seconds": 42
+  "cumulative_scientific_runtime_seconds": 8.668,
+  "total_job_runtime_seconds": 47
 }

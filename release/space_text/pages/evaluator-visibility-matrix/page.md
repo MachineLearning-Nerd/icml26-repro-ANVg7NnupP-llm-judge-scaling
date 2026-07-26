@@ -17,9 +17,9 @@ current pages. No OpenResearch dashboard knowledge is required.
 - Python and dependencies are downloadable from `pyproject.toml` and `uv.lock`.
 - Raw tables, certificates, checkers, controls, source audits, runtime metadata,
   and limitations are linked from the canonical pages.
-- Scientific commit: `02de86848c638d3280fa89f4cff416cde9664c1e`.
-- Cumulative run: `6f3196eb-7767-48ce-8c25-86fefac1f11a`, 42 seconds on
-  Hugging Face `cpu-upgrade`, 64-CPU affinity visible, 8.392-second scientific
+- Validated verifier commit: `e0a6aa04e971eb1bf3516f484451e1f529b6f421`.
+- Cumulative run: `585734a7-0b00-4bb3-87f7-9e951cf34514`, 47 seconds on
+  Hugging Face `cpu-upgrade`, 64-CPU affinity visible, 8.668-second scientific
   runtime, 12/12 tests.
 - Exact source HTML SHA-256:
   `e08754be87ff444711e592ec8d1a358e8362e86dacfab9cb8bd874fdcfd7d353`.

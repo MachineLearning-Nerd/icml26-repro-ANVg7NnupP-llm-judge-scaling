@@ -132,7 +132,7 @@ every parameter regime would be vacuous.
 
 The successful cumulative run used Hugging Face `cpu-upgrade`; estimated need
 was 2 cores, the provider exposed 64 through affinity, total wall time was
-42 seconds, and scientific runtime was 8.392 seconds. The local baseline used
+47 seconds, and scientific runtime was 8.668 seconds. The local baseline used
 one effective core and finished in 70 seconds including clone/setup. No GPU was
 used.
 
