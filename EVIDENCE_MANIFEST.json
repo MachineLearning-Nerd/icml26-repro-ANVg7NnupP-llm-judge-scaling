@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "repository": {
+    "name": "MachineLearning-Nerd/icml26-llm-judge-inference-scaling",
+    "old_name": "icml26-repro-ANVg7NnupP-llm-judge-scaling",
+    "default_branch": "main",
+    "attribution": "MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>",
+    "independent_code": true,
+    "official_source_audited": true
+  },
+  "paper": {
+    "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling",
+    "authors": [
+      "Indranil Halder",
+      "Cengiz Pehlevan"
+    ],
+    "arxiv": "2512.19905",
+    "version": 2,
+    "pdf_sha256": "ca9fd15ee9696e93d2d9f01317ae72f4c24eb6dcec56937fb3b4afe01521be39",
+    "primary_html": "https://ar5iv.labs.arxiv.org/html/2512.19905",
+    "primary_html_sha256": "e08754be87ff444711e592ec8d1a358e8362e86dacfab9cb8bd874fdcfd7d353"
+  },
+  "collection_status": "VERIFIED_SCOPED_WITH_LIVE_SCORE_PENDING",
+  "claims": {
+    "claim_1": {
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Result 3, equation 17",
+      "evidence": [
+        ".openresearch/artifacts/claim1/claim_contract.json",
+        ".openresearch/artifacts/claim1/raw_results.json",
+        ".openresearch/artifacts/claim1/independent_checker.json",
+        ".openresearch/artifacts/claim1/negative_control.json",
+        "outputs/best_of_k_exact.csv",
+        "reproduction/reproduce.py"
+      ],
+      "metrics": {
+        "teacher_offsets": [0.0, 0.25, 0.5, 1.0],
+        "maximum_k": 16384,
+        "fitted_slope_min": -1.9975616978815185,
+        "fitted_slope_max": -1.9975445684775015,
+        "max_coefficient_relative_error_k_ge_1024": 0.0029230255265433325
+      },
+      "limitation": "Numerical certificate for the analytical pointwise model and ordered limit, not a proof or LLM benchmark."
+    },
+    "claim_2": {
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Result 2, equation 15",
+      "evidence": [
+        ".openresearch/artifacts/claim2/claim_contract.json",
+        ".openresearch/artifacts/claim2/raw_results.json",
+        ".openresearch/artifacts/claim2/independent_checker.json",
+        ".openresearch/artifacts/claim2/negative_control.json",
+        "outputs/good_reward_exact.csv",
+        "outputs/monte_carlo_crosscheck.csv",
+        "reproduction/reproduce.py"
+      ],
+      "metrics": {
+        "monotone_curves": 36,
+        "total_curves": 36,
+        "maximum_k1_identity_error": 0.00003,
+        "monte_carlo_trials": 640000,
+        "maximum_monte_carlo_absolute_error": 0.004079085648643455
+      },
+      "limitation": "Finite sweep of declared pointwise conditional regimes; not a universal alignment theorem."
+    },
+    "claim_3": {
+      "status": "VERIFIED_SCOPED",
+      "paper_anchor": "Remark 3, equations 20-21",
+      "evidence": [
+        ".openresearch/artifacts/claim3/claim_contract.json",
+        ".openresearch/artifacts/claim3/raw_results.json",
+        ".openresearch/artifacts/claim3/independent_checker.json",
+        ".openresearch/artifacts/claim3/negative_control.json",
+        "outputs/misspecification_phase.csv",
+        "reproduction/reproduce.py"
+      ],
+      "metrics": {
+        "finite_optimum_configurations": 23,
+        "total_configurations": 90,
+        "representative_optimal_k": 2,
+        "representative_k1_error": 1.040000000000004,
+        "representative_k256_error": 1.0827298462485193,
+        "representative_degradation_percent": 5.809084625014016
+      },
+      "limitation": "The finite-optimum consequence is tested; separate threshold and k* approximation formulas are not certified."
+    },
+    "claim_4": {
+      "status": "VERIFIED_SCOPED_CALIBRATION",
+      "paper_anchor": "Remark 4, equation S3.E22 and Result 2",
+      "evidence": [
+        ".openresearch/artifacts/claim4/claim_contract.json",
+        ".openresearch/artifacts/claim4/proof_certificate.json",
+        ".openresearch/artifacts/claim4/raw_exact_calibration.csv",
+        ".openresearch/artifacts/claim4/raw_monte_carlo.csv",
+        ".openresearch/artifacts/claim4/independent_checker.json",
+        ".openresearch/artifacts/claim4/negative_control.json",
+        "reproduction/claim4_verification.py"
+      ],
+      "metrics": {
+        "positive_certificate_cases": 15,
+        "invalid_cases_rejected": 3,
+        "eligible_calibrations": 10,
+        "eligible_median_relative_error": 0.044303,
+        "eligible_max_relative_error": 0.085676,
+        "monte_carlo_trials": 120000,
+        "monte_carlo_max_absolute_z_score": 0.44299771521147785
+      },
+      "limitation": "Truncated high-temperature expansion calibration with t >= 20; not an arbitrary-temperature identity."
+    },
+    "claim_5": {
+      "status": "VERIFIED_SCOPED_PROPORTIONAL_LIMIT",
+      "paper_anchor": "Remark 6, equations S3.E23-S3.E24",
+      "evidence": [
+        ".openresearch/artifacts/claim5/claim_contract.json",
+        ".openresearch/artifacts/claim5/proof_certificate.json",
+        ".openresearch/artifacts/claim5/raw_scaling_comparison.csv",
+        ".openresearch/artifacts/claim5/independent_checker.json",
+        ".openresearch/artifacts/claim5/negative_control.json",
+        "reproduction/claim5_verification.py"
+      ],
+      "metrics": {
+        "alpha_values": [0.005, 0.01, 0.02, 0.04, 0.08],
+        "inference_log_slope": -2.000000000000001,
+        "maximum_training_log_slope_magnitude": 0.00000163902,
+        "minimum_inference_to_training_magnitude_ratio": 1220243,
+        "maximum_slope_checker_absolute_difference": 8.543360721229663e-12
+      },
+      "limitation": "Proportional-limit deterministic-equivalent audit, not finite-dimensional retraining."
+    }
+  },
+  "historical_evaluator": {
+    "space": "DineshAI/ANVg7NnupP",
+    "previous_live_score": "6/10",
+    "protected_parent": "888e34394f08123538bccdaba0e8852558a5b724",
+    "published_revision": "e243be8375bd6139647f40f9b114ab1d59c9eaf2",
+    "new_score_claimed": false
+  },
+  "release_gate": {
+    "all_current_claims_terminal": true,
+    "published_text_only_update": true,
+    "postpublication_audit_passed": true,
+    "live_judge_pending": true
+  },
+  "thank_you": "Thank you to Indranil Halder and Cengiz Pehlevan for sharing an analytically tractable model that makes this independent audit possible."
+}

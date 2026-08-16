@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling — ICML 2026 Evidence Audit"
+message: "If this repository or its evidence is useful, please cite both the paper and this independent audit."
+type: software
+authors:
+  - family-names: Halder
+    given-names: Indranil
+  - family-names: Pehlevan
+    given-names: Cengiz
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-llm-judge-inference-scaling"
+url: "https://arxiv.org/abs/2512.19905"
+date-released: 2026-08-16
+keywords:
+  - LLM-as-a-judge
+  - inference-time scaling
+  - best-of-k
+  - Bayesian regression
+  - reproducibility
+  - ICML 2026

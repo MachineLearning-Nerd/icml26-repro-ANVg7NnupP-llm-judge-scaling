@@ -151,7 +151,7 @@ judge can change the score.
 
 Experiment lineage:
 
-- [Frozen validated baseline](https://github.com/MachineLearning-Nerd/icml26-repro-ANVg7NnupP-llm-judge-scaling/tree/orx/frozen-validated-baseline)
-- [Claim 4 exact temperature contract](https://github.com/MachineLearning-Nerd/icml26-repro-ANVg7NnupP-llm-judge-scaling/tree/orx/claim-4-exact-temperature-contract)
-- [Claim 5 inference versus data scaling](https://github.com/MachineLearning-Nerd/icml26-repro-ANVg7NnupP-llm-judge-scaling/tree/orx/claim-5-inference-versus-data-scaling)
-- [Release candidate and blind audit](https://github.com/MachineLearning-Nerd/icml26-repro-ANVg7NnupP-llm-judge-scaling/tree/orx/release-candidate-and-blind-audit)
+- [Frozen validated baseline](https://github.com/MachineLearning-Nerd/icml26-llm-judge-inference-scaling/tree/baseline/judged-6-of-10)
+- [Claim 4 exact temperature contract](https://github.com/MachineLearning-Nerd/icml26-llm-judge-inference-scaling/tree/audit/claim-4-temperature)
+- [Claim 5 inference versus data scaling](https://github.com/MachineLearning-Nerd/icml26-llm-judge-inference-scaling/tree/audit/claim-5-data-scaling)
+- [Release candidate and blind audit](https://github.com/MachineLearning-Nerd/icml26-llm-judge-inference-scaling/tree/release/candidate-blind-audit)
