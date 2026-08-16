@@ -214,7 +214,7 @@ def check_paper_and_artifacts() -> dict:
     claim3_checker = load_json(".openresearch/artifacts/claim3/independent_checker.json")
     claim3_negative = load_json(".openresearch/artifacts/claim3/negative_control.json")
     require(claim3_checker.get("qualitative_finite_optimum_recovered") is True, "Claim 3 checker failed")
-    require(claim3_negative.get("expected_behavior_observed") is True, "Claim 3 negative control failed")
+    require(claim3_negative.get("expected_contrast_observed") is True, "Claim 3 negative control failed")
 
     claim4_proof = load_json(".openresearch/artifacts/claim4/proof_certificate.json")
     claim4_checker = load_json(".openresearch/artifacts/claim4/independent_checker.json")
